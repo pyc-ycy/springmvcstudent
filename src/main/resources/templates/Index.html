@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+          crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <title>学生信息管理系统</title>
+</head>
+<body>
+<center>
+    <div class="container">
+        <div class="row" >
+            <div>
+                <div class="col-md-8">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                提示信息
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-info">
+                                欢迎访问学生信息管理系统，若未注册请先进行注册，若已注册请使用注册账号和密码进行登陆！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div style="width: auto;height: 50px"></div>
+            <div class="col-md-8">
+                <form class="form-horizontal" style="width: 500px">
+                    <div class="form-group">
+                        <label for="stuID" class="col-sm-2 control-label">StudentID:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="stuID" name="stuID" placeholder="StudentID">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2 control-label">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkPassword" class="col-sm-2 control-label">CheckPassword:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="checkPassword" name="CheckPassword" placeholder="Check Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            &emsp;&emsp;&emsp;&emsp;
+                            <button type="button" class="btn btn-default" onclick="window.location.href='/toSign'">Sign</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+</body>
