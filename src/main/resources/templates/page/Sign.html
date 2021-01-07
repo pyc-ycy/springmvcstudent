@@ -39,7 +39,8 @@
             </div>
         </div>
         <div class="col-md-8">
-            <form class="form-horizontal" style="width: 500px">
+            <form class="form-horizontal" name="form" style="width: 500px" method="post" action="/sign" th:action="@{/sign}"
+            onsubmit="return check(form.stuID,form.password)">
                 <div class="form-group">
                     <label for="stuID" class="col-sm-2 control-label">StudentID:</label>
                     <div class="col-sm-10">
@@ -84,12 +85,23 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Sign</button>
+                        <input type="submit" class="btn btn-primary" value="Sign"/>
                         &emsp;&emsp;&emsp;&emsp;
                         <button type="button" class="btn btn-default" onclick="window.location.href='/index'">Login</button>
                     </div>
                 </div>
             </form>
+            <script>
+                function check(stuId,password) {
+                    if(stuId.value!==""&&password.value!=="")
+                    {
+                        if(password.value.length>=8)
+                            return true;
+                    }
+                    alert("学号和密码为空，或密码长度小于8");
+                    return false;
+                }
+            </script>
         </div>
     </div>
 </div>
